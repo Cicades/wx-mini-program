@@ -1,0 +1,28 @@
+/* pages/index/index.wxss */
+page{
+  height: 100%;
+  background: #7debf7;
+}
+.index-container{
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.avatar image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+}
+.welcom{
+  color: #fff;
+  text-shadow: 0 0 10rpx yellowgreen;
+}
+.start-btn, .go-list{
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10rpx;
+  border-radius: 10rpx;
+}

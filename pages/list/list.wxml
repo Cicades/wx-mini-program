@@ -1,0 +1,10 @@
+<view class='list-container'>
+  <swiper autoplay='true' indicator-color='#fff' indicator-dots='true' indicator-active-color='aqua' circular='true'>
+    <swiper-item wx:for='{{images}}' wx:key='{{index}}'>
+      <image src='{{item}}'></image>
+    </swiper-item>
+  </swiper>
+  <view class='cards-list'>
+    <acticle-card wx:for="{{articleList}}" article-info="{{item}}" wx:key='{{index}}'/>
+  </view>
+</view>

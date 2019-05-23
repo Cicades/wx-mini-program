@@ -1,0 +1,46 @@
+/* components/article-card/index.wxss */
+.card-container{
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.5);
+  padding: 10rpx;
+  margin-bottom: 20rpx;
+  border-radius: 8rpx;
+}
+.card-userinfo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.card-userinfo .avatar{
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+}
+.card-userinfo .date{
+  font-size: 28rpx;
+  color: #ccc;
+  font-weight: light;
+}
+.card-title{
+  margin: 20rpx 0;
+}
+.card-image{
+  width: 100%;
+}
+.card-desc{
+  font-size: 28rpx;
+  text-indent: 56rpx;
+  margin: 20rpx 0;
+}
+.card-views{
+  display: flex;
+  font-size: 28rpx;
+}
+.card-views text, .card-views image{
+  margin-left: 20rpx;
+}
+.card-views image{
+  width: 32rpx;
+  height: 32rpx;  
+}

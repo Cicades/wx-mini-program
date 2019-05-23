@@ -1,0 +1,19 @@
+<!--pages/detail/detail.wxml-->
+<view class='detail-container'>
+  <image src='{{articleInfo.detail_img}}' class='detail-image'></image>
+  <view class='content-wrap'>
+    <view class='user-info'>
+      <image src='{{articleInfo.avatar}}' class='avatar'></image>
+      <text class='date'>{{articleInfo.date}}</text>
+    </view>
+    <text class='title'>{{articleInfo.title}}</text>
+    <view class='operations' bindtap='onOperate'>
+      <image src='/images/icon/collection.png' wx:if="{{hasCollected}}" data-operation="collect"></image>
+      <image src='/images/icon/collection-anti.png' wx:else data-operation="collect"></image>
+      <image src='/images/icon/share.png' wx:if="{{hasShared}}" data-operation="share"></image>
+      <image src='/images/icon/share-anti.png' wx:else data-operation="share"></image>
+    </view>
+    <text class='content'>{{articleInfo.detail_content}}</text>
+    <button type='primary'>分享</button>
+  </view>
+</view>

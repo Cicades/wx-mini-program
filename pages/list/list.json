@@ -1,0 +1,5 @@
+{
+  "usingComponents": {"acticle-card": "/components/article-card/index"},
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black"
+}

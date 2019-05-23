@@ -1,0 +1,11 @@
+/* pages/list/list.wxss */
+swiper{
+  width: 100%;
+  height: 400rpx;
+}
+swiper swiper-item image{
+  width: 100%;
+}
+.cards-list{
+  padding: 25rpx 10rpx;
+}

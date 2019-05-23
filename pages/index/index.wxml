@@ -1,0 +1,7 @@
+<!--pages/index/index.wxml-->
+<view class='index-container'>
+  <view class='avatar' wx:if="{{isAuthenticated}}"><image src='/images/index/cart.jpg'></image></view>
+  <text class='welcom' wx:if="{{isAuthenticated}}">hello {{userInfo.nickName}}</text>
+  <label wx:if="{{!isAuthenticated}}"><text class='start-btn'>开启旅程!</text><button open-type='getUserInfo' hidden='true' bindgetuserinfo='getUserInfoHandle'></button></label>
+  <text class='go-list' wx:if="{{isAuthenticated}}" catchtap='goList'>Go!</text>
+</view>

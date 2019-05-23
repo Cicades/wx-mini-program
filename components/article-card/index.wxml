@@ -1,0 +1,20 @@
+<!--components/article-card/index.wxml-->
+<view class='card-container'>
+  <view class='card-userinfo'>
+    <image src='{{articleInfo.avatar}}' class='avatar'></image>
+    <text class='date'>{{articleInfo.date}}</text>
+  </view>
+  <text class='card-title'>{{articleInfo.title}}</text>
+  <image class='card-image' src='{{articleInfo.detail_img}}' catchtap='onTap'></image>
+  <text class='card-desc'>{{articleInfo.detail_content}}</text>
+  <view class='card-views'>
+    <view class='stars'>
+      <image src='/images/icon/chat.png'></image>
+      <text>{{articleInfo.love_count}}</text>
+    </view>
+    <view class='views'>
+      <image src='/images/icon/view.png'></image>
+      <text>{{articleInfo.attention_count}}</text>
+    </view>
+  </view>
+</view>

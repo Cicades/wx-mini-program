@@ -1,0 +1,32 @@
+/* pages/movie_list/movie_list.wxss */
+.movie-item{
+  display: flex;
+  padding: 10rpx;
+  margin-bottom: 10rpx;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.poster{
+  width: 128rpx;
+  height: 128rpx;
+  margin-right: 10rpx;
+}
+.movie-info{
+  font-size: 28rpx;
+  color: #333;
+  font-weight: light;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.movie-info .movie-title{
+  width: 500rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.rate{
+  color: red;
+}

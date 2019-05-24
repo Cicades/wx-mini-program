@@ -63,7 +63,7 @@ Page({
     }) 
   },
   goList(){
-    wx.navigateTo({
+    wx.switchTab({
       url: '/pages/list/list',
     })
   }

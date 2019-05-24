@@ -7,7 +7,8 @@ Page({
   data: {
     articleInfo: {},
     hasShared: false,
-    hasCollected: false
+    hasCollected: false,
+    isPlayingMusic: false
   },
 
   /**
@@ -21,6 +22,21 @@ Page({
     this.setData({
       articleInfo: search(index),
       hasShared
+    })
+    // 设置音乐播放器监听
+    const m = wx.getBackgroundAudioManager()
+    m.onEnded(() => {
+      this.data.isPlayingMusic = false
+    })
+    m.onPlay(()=>{
+      this.setData({
+        isPlayingMusic: true
+      })
+    })
+    m.onPause(()=>{
+      this.setData({
+        isPlayingMusic: false
+      })
     })
   },
 
@@ -42,14 +58,14 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    const m = wx.getBackgroundAudioManager()
+    m.stop()
   },
 
   /**
@@ -99,5 +115,20 @@ Page({
       default:
         return
     }
+  },
+  onMusicPlay(){
+    const music = this.data.articleInfo.music
+    const m = wx.getBackgroundAudioManager()
+    if (m.src === music.dataUrl){
+      this.data.isPlayingMusic ? m.pause() : m.play()
+    } else {
+      m.title = music.title
+      m.epname = music.title
+      m.coverImgUrl = music.coverImgUrl
+      m.src = music.dataUrl
+    }
+    this.setData({
+      isPlayingMusic: !this.data.isPlayingMusic
+    })
   }
 })

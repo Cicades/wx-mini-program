@@ -41,3 +41,14 @@
 .content-wrap{
   padding: 20rpx;
 }
+.music-play-icon{
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%)
+}
+.detail-header-wrapper{
+  position: relative;
+}

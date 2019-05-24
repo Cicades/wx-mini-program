@@ -1,0 +1,11 @@
+<!--pages/movie_detail/movie_detail.wxml-->
+<view class='movie-detail-container'>
+  <image class='poster' src='{{movie.images.large}}' mode='aspectFit'></image>
+  <text class='title'>{{movie.title}}</text>
+  <view class='info'>
+    <text>评分：{{movie.rating.average}}</text>
+    <text>导演：{{movie.directors}}</text>
+    <text>主演：{{movie.casts}}</text>
+  </view>
+  <button type='primary' class='go-movie'>我要观影</button>
+</view>

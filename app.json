@@ -1,8 +1,10 @@
 {
   "pages": [
-    "pages/list/list",
     "pages/index/index",
-    "pages/detail/detail"
+    "pages/movie_list/movie_list",
+    "pages/list/list",
+    "pages/detail/detail",
+    "pages/movie_detail/movie_detail"
   ],
   "window": {
     "navigationBarBackgroundColor": "#7debf7",
@@ -12,5 +14,25 @@
     "backgroundTextStyle": "light",
     "enablePullDownRefresh": false
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "tabBar": {
+    "list": [
+      {
+      "pagePath": "pages/list/list",
+      "text": "好文",
+      "iconPath": "/images/tab/yuedu.png",
+      "selectedIconPath": "/images/tab/yuedu_hl.png"
+      },
+      {
+        "pagePath": "pages/movie_list/movie_list",
+        "text": "电影",
+        "iconPath": "/images/tab/dianying.png",
+        "selectedIconPath": "/images/tab/dianying_hl.png"
+      }
+    ],
+    "selectedColor": "#7debf7"
+  }
 }

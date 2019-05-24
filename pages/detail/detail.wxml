@@ -1,6 +1,9 @@
 <!--pages/detail/detail.wxml-->
 <view class='detail-container'>
-  <image src='{{articleInfo.detail_img}}' class='detail-image'></image>
+  <view class='detail-header-wrapper'>
+    <image src='{{isPlayingMusic?"/images/music/music-stop.png":"/images/music/music-start.png"}}'     class='music-play-icon' catchtap='onMusicPlay'></image>
+    <image src='{{isPlayingMusic?articleInfo.music.coverImgUrl:articleInfo.detail_img}}' class='detail-image'></image>
+  </view>
   <view class='content-wrap'>
     <view class='user-info'>
       <image src='{{articleInfo.avatar}}' class='avatar'></image>
@@ -14,6 +17,6 @@
       <image src='/images/icon/share-anti.png' wx:else data-operation="share"></image>
     </view>
     <text class='content'>{{articleInfo.detail_content}}</text>
-    <button type='primary'>分享</button>
+    <button type='primary' open-type='share'>分享</button>
   </view>
 </view>
